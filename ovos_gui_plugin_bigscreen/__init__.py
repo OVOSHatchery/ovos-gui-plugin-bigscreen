@@ -15,7 +15,8 @@ class BigscreenExtension(GUIExtension):
         permanent (bool): disable unloading of GUI skills on gui client disconnections
     """
 
-    def __init__(self, bus, gui, config, preload_gui=False, permanent=False):
+    def __init__(self, config, bus=None, gui=None,
+                 preload_gui=False, permanent=False):
         LOG.info("Bigscreen: Initializing")
         self.interaction_without_idle = True
         self.interaction_skill_id = None
